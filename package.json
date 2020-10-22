@@ -1,0 +1,23 @@
+{
+  "name": "auth0-javascript-samples",
+  "version": "1.0.0",
+  "description": "This repository holds the quickstart samples using [auth0-spa-js](https://github.com/auth0/auth0-spa-js).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auth0-samples/auth0-javascript-samples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/auth0-samples/auth0-javascript-samples/issues"
+  },
+  "homepage": "https://github.com/auth0-samples/auth0-javascript-samples#readme",
+  "devDependencies": {
+    "auth0-deploy-cli": "^5.2.1"
+  }
+}

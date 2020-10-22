@@ -1,0 +1,188 @@
+clients:
+  - name: Service1
+    addons: {}
+    allowed_clients: []
+    allowed_logout_urls:
+      - 'https://app1.local.gd/'
+    allowed_origins: []
+    app_type: spa
+    callbacks:
+      - 'https://app1.local.gd/'
+    client_aliases:
+      - app1.local.gd
+    cross_origin_auth: false
+    custom_login_page_on: true
+    grant_types:
+      - authorization_code
+      - implicit
+      - refresh_token
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    native_social_login:
+      apple:
+        enabled: false
+      facebook:
+        enabled: false
+    oidc_conformant: true
+    refresh_token:
+      leeway: 0
+      token_lifetime: 2592000
+      rotation_type: rotating
+      expiration_type: expiring
+    sso_disabled: false
+    token_endpoint_auth_method: none
+    web_origins:
+      - 'https://app1.local.gd/'
+  - name: Service2
+    addons: {}
+    allowed_clients: []
+    allowed_logout_urls:
+      - 'https://app2.local.gd/'
+    allowed_origins: []
+    app_type: spa
+    callbacks:
+      - 'https://app2.local.gd/'
+    client_aliases:
+      - app2.local.gd
+    cross_origin_auth: false
+    custom_login_page_on: true
+    grant_types:
+      - authorization_code
+      - implicit
+      - refresh_token
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    native_social_login:
+      apple:
+        enabled: false
+      facebook:
+        enabled: false
+    oidc_conformant: true
+    refresh_token:
+      leeway: 0
+      token_lifetime: 2592000
+      rotation_type: rotating
+      expiration_type: expiring
+    sso_disabled: false
+    token_endpoint_auth_method: none
+    web_origins:
+      - 'https://app2.local.gd/'
+  - name: Service3
+    allowed_clients: []
+    allowed_logout_urls:
+      - 'http://app3.local.gd:3000'
+    allowed_origins: []
+    app_type: regular_web
+    callbacks:
+      - 'https://app3.local.gd/callback'
+    client_aliases: []
+    cross_origin_auth: false
+    custom_login_page_on: true
+    grant_types:
+      - authorization_code
+      - implicit
+      - refresh_token
+    is_first_party: true
+    is_token_endpoint_ip_header_trusted: false
+    jwt_configuration:
+      alg: RS256
+      lifetime_in_seconds: 36000
+      secret_encoded: false
+    native_social_login:
+      apple:
+        enabled: false
+      facebook:
+        enabled: false
+    oidc_conformant: true
+    refresh_token:
+      leeway: 0
+      token_lifetime: 2592000
+      rotation_type: rotating
+      expiration_type: expiring
+    sso_disabled: false
+    token_endpoint_auth_method: none
+    web_origins:
+      - 'https://app3.local.gd/'
+connections:
+  - name: github
+    strategy: github
+    enabled_clients:
+      - Service2
+      - Service3
+    is_domain_connection: false
+    options:
+      gist: false
+      repo: false
+      email: false
+      scope: []
+      follow: false
+      profile: true
+      read_org: false
+      admin_org: false
+      client_id: ''
+      read_user: false
+      write_org: false
+      delete_repo: false
+      public_repo: false
+      repo_status: false
+      client_secret: ''
+      notifications: false
+      read_repo_hook: false
+      admin_repo_hook: false
+      read_public_key: false
+      repo_deployment: false
+      write_repo_hook: false
+      admin_public_key: false
+      write_public_key: false
+  - name: google-oauth2
+    strategy: google-oauth2
+    enabled_clients:
+      - Service1
+      - Service2
+      - Service3
+    is_domain_connection: false
+    options:
+      email: true
+      gmail: false
+      orkut: false
+      scope:
+        - email
+        - profile
+      sites: false
+      tasks: false
+      blogger: false
+      profile: true
+      youtube: false
+      calendar: false
+      contacts: false
+      analytics: false
+      client_id: ''
+      moderator: false
+      coordinate: false
+      picasa_web: false
+      google_plus: false
+      google_books: false
+      google_drive: false
+      spreadsheets: false
+      client_secret: ''
+      document_list: false
+      latitude_best: false
+      latitude_city: false
+      url_shortener: false
+      webmaster_tools: false
+      chrome_web_store: false
+      allowed_audiences: ''
+      adsense_management: false
+      google_drive_files: false
+      coordinate_readonly: false
+      google_cloud_storage: false
+      content_api_for_shopping: false
+      google_affiliate_network: false

@@ -1,0 +1,6 @@
+[submodule "auth0-nodejs-webapp-sample"]
+	path = auth0-nodejs-webapp-sample
+	url = https://github.com/auth0-samples/auth0-nodejs-webapp-sample
+[submodule "auth0-javascript-samples"]
+	path = auth0-javascript-samples
+	url = https://github.com/auth0-samples/auth0-javascript-samples

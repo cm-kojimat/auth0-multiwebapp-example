@@ -1,0 +1,35 @@
+---
+version: "3.9"
+services:
+  proxy:
+    image: jwilder/nginx-proxy:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./etc/certs:/etc/nginx/certs:ro
+  app1:
+    build: auth0-javascript-samples/01-Login
+    volumes:
+      - ./etc/app1/auth_config.json:/app/auth_config.json:ro
+    environment:
+      - VIRTUAL_HOST=app1.local.gd
+      - VIRTUAL_PORT=3000
+      - CERT_NAME=shared
+  app2:
+    build: auth0-javascript-samples/01-Login
+    volumes:
+      - ./etc/app2/auth_config.json:/app/auth_config.json:ro
+    environment:
+      - VIRTUAL_HOST=app2.local.gd
+      - VIRTUAL_PORT=3000
+      - CERT_NAME=shared
+  app3:
+    build: auth0-nodejs-webapp-sample/01-Login
+    volumes:
+      - ./etc/app3/.env:/home/app/.env:ro
+    environment:
+      - VIRTUAL_HOST=app3.local.gd
+      - VIRTUAL_PORT=3000
+      - CERT_NAME=shared
