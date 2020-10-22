@@ -51,9 +51,8 @@ v12.19.0
 ### submodule の clone
 
 ```
-❯ git submodule init
-
-❯ git submodule update --recursive
+git submodule init
+git submodule update --recursive
 ```
 
 ### auth0 の import
